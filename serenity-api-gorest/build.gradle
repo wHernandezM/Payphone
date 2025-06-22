@@ -1,0 +1,29 @@
+
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '8.4'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.1.12'
+}
+
+group = 'com.payphone'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-core:4.2.34'
+    implementation 'net.serenity-bdd:serenity-junit5:4.2.34'
+    implementation 'org.assertj:assertj-core:3.24.2'
+    implementation 'net.serenity-bdd:serenity-rest-assured:4.1.12'
+    implementation 'net.serenity-bdd:serenity-junit5:4.1.12'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.17.0'
+}
+
+test {
+    useJUnitPlatform()
+}
